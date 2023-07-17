@@ -6,7 +6,8 @@
         "xamtirg cms",
         "xamtirg platform"
     ],
-	"authors": [
+    "license": "MIT",
+    "authors": [
         {
             "name": "Xamtirg",
             "email": "xamtirg@xamtirg.com",
