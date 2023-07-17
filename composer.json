@@ -1,0 +1,84 @@
+{
+    "name": "xamtirg/platform",
+    "description": "The Xamtirg platform is based on the Laravel Framework.",
+	"keywords": [
+        "xamtirg",
+        "xamtirg cms",
+        "xamtirg platform"
+    ],
+	"authors": [
+        {
+            "name": "Xamtirg",
+            "email": "xamtirg@xamtirg.com",
+            "role": "Developer"
+        }
+    ],
+	"type": "project",
+	"require": {
+        "barryvdh/laravel-dompdf": "^2.0",
+        "xamtirg/assets": "^1.0",
+        "intervention/image": "^2.6",
+        "kris/laravel-form-builder": "dev-master",
+        "laravelcollective/html": "^6.2",
+        "xantios/mimey": "^2.2",
+        "tightenco/ziggy": "^1.4",
+        "yajra/laravel-datatables-buttons": "^9.1",
+        "yajra/laravel-datatables-oracle": "^10.2",
+        "guzzlehttp/guzzle": "^6.0|^7.0",
+        "mews/purifier": "^3.3",
+        "maatwebsite/excel": "^3.1",
+        "symfony/http-client": "^6.0",
+        "symfony/postmark-mailer": "^6.0",
+        "symfony/mailgun-mailer": "^6.0",
+        "twig/twig": "^3.0",
+        "doctrine/dbal": "^3.2",
+        "league/flysystem-aws-s3-v3": "^3.0"
+    },
+	"autoload": {
+        "psr-4": {
+            "Xamtirg\\Support\\": "support/src",
+            "Xamtirg\\ACL\\": "acl/src",
+            "Xamtirg\\Base\\": "base/src",
+            "Xamtirg\\Base\\Tests\\": "base/tests",
+            "Xamtirg\\Dashboard\\": "dashboard/src",
+            "Xamtirg\\Media\\": "media/src",
+            "Xamtirg\\Setting\\": "setting/src",
+            "Xamtirg\\Table\\": "table/src",
+            "Xamtirg\\JsValidation\\": "js-validation/src",
+            "Xamtirg\\Chart\\": "chart/src"
+        }
+    },
+	"extra": {
+        "laravel": {
+            "providers": [
+                "Xamtirg\\Base\\Providers\\BaseServiceProvider",
+                "Xamtirg\\Base\\Providers\\CommandServiceProvider",
+                "Xamtirg\\Base\\Providers\\EventServiceProvider",
+                "Xamtirg\\Base\\Providers\\BreadcrumbsServiceProvider",
+                "Xamtirg\\Base\\Providers\\ComposerServiceProvider",
+                "Xamtirg\\Base\\Providers\\MailConfigServiceProvider",
+                "Xamtirg\\Base\\Providers\\FormServiceProvider",
+                "Xamtirg\\Support\\Providers\\SupportServiceProvider",
+                "Xamtirg\\Table\\Providers\\TableServiceProvider",
+                "Xamtirg\\ACL\\Providers\\AclServiceProvider",
+                "Xamtirg\\Dashboard\\Providers\\DashboardServiceProvider",
+                "Xamtirg\\Media\\Providers\\MediaServiceProvider",
+                "Xamtirg\\JsValidation\\Providers\\JsValidationServiceProvider",
+                "Xamtirg\\Chart\\Providers\\ChartServiceProvider"
+            ],
+            "aliases": {
+                "Assets": "Xamtirg\\Base\\Facades\\AssetsFacade",
+                "BaseHelper": "Xamtirg\\Base\\Facades\\BaseHelperFacade",
+                "MetaBox": "Xamtirg\\Base\\Facades\\MetaBoxFacade",
+                "Action": "Xamtirg\\Base\\Facades\\ActionFacade",
+                "Filter": "Xamtirg\\Base\\Facades\\FilterFacade",
+                "EmailHandler": "Xamtirg\\Base\\Facades\\EmailHandlerFacade",
+                "Breadcrumbs": "Xamtirg\\Base\\Facades\\BreadcrumbsFacade",
+                "MacroableModels": "Xamtirg\\Base\\Facades\\MacroableModelsFacade",
+                "JsValidator": "Xamtirg\\JsValidation\\Facades\\JsValidatorFacade"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
